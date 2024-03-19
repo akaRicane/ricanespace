@@ -6,11 +6,13 @@
 
 You will be able to find my settings.json config file. Feel free to take it and manipulate it as you wish.
 
+I added a description of each settings to ease the integration / understanding.
+
 <br/>
 
 ### ✅ **vscode extensions**
 
-**Development Experience**
+**Development experience**
 
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 - [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
