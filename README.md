@@ -38,6 +38,11 @@ I added a description of each settings to ease the integration / understanding.
 - [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 - [JavaScript and TypeScript Nightly](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next)
 
+**Adonis JS**
+
+- [AdonisJS Extension](https://marketplace.visualstudio.com/items?itemName=jripouteau.adonis-vscode-extension)
+- [Edge templates syntax highlighter](https://marketplace.visualstudio.com/items?itemName=AdonisJS.vscode-edge)
+
 **CSS/Tailwind**
 
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
