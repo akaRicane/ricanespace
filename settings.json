@@ -1,83 +1,86 @@
 {
   "[json]": {
     "editor.quickSuggestions": {
-      "strings": true // Enable quick suggestions for strings in JSON files
+      "strings": true
     }
   },
   "[python]": {
-    "editor.rulers": [120] // Show a ruler at column 120 in Python files
+    "editor.rulers": [120]
   },
-  "breadcrumbs.enabled": true, // Show file path in the top of the script window
-  "editor.acceptSuggestionOnCommitCharacter": true, // Accept suggestions on commit characters
-  "editor.acceptSuggestionOnEnter": "on", // Accept suggestions on Enter key press
-  "editor.autoClosingBrackets": "always", // Automatically close brackets
+  "breadcrumbs.enabled": true, // file path en haut de la window du script
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.autoClosingBrackets": "always",
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit", // Apply all available code fixes on save
-    "source.organizeImports": "explicit" // Organize imports on save
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode", // Set Prettier as the default code formatter
-  "editor.fontLigatures": true, // Enable font ligatures
-  "editor.fontSize": 13, // Set the font size to 13
-  "editor.formatOnPaste": true, // Format code on paste
-  "editor.formatOnSave": true, // Format code on save
-  "editor.inlineSuggest.enabled": true, // Enable inline suggestions
-  "editor.lineHeight": 18, // Set the line height to 18
-  "editor.linkedEditing": false, // Disable linked editing for HTML tags
-  "editor.minimap.enabled": true, // Show a minimap on the right side
-  "editor.multiCursorModifier": "ctrlCmd", // Use Ctrl/Cmd for multiple cursors
-  "editor.occurrencesHighlight": "off", // Disable occurrences highlight
-  "editor.parameterHints.enabled": true, // Enable parameter hints
-  "editor.quickSuggestionsDelay": 10, // Set the delay for quick suggestions to 10ms
-  "editor.renderWhitespace": "boundary", // Render whitespace characters with boundaries
-  "editor.rulers": [180], // Show a ruler at column 180
-  "editor.suggest.insertMode": "insert", // Insert suggestion instead of replacing the current word
-  "editor.suggest.localityBonus": true, // Apply locality bonus to suggestions
-  "editor.suggestOnTriggerCharacters": true, // Trigger suggestions on typing trigger characters
-  "editor.suggestSelection": "first", // Select the first suggestion by default
-  "editor.tabCompletion": "off", // Disable tab completion
-  "editor.tabSize": 2, // Set the tab size to 2 spaces
-  "editor.wordBasedSuggestions": "matchingDocuments", // Show word-based suggestions from matching documents
-  "editor.wordWrap": "on", // Enable word wrap
-  "emmet.triggerExpansionOnTab": true, // Expand HTML tags on tab
-  "explorer.autoReveal": true, // Automatically reveal files in the explorer
-  "explorer.openEditors.sortOrder": "alphabetical", // Sort open editors alphabetically
-  "files.defaultLanguage": "js", // Set the default language to JavaScript
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 13,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineHeight": 18,
+  "editor.linkedEditing": false, // Quand on change un élément HTML, change la balise fermante
+  "editor.minimap.enabled": true, // minimap de scroll sur la droite
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.occurrencesHighlight": "off",
+  "editor.parameterHints.enabled": true,
+  "editor.quickSuggestionsDelay": 10,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [180],
+  "editor.suggest.insertMode": "insert", // L'autocomplétion remplace le mot en cours
+  "editor.suggest.localityBonus": true,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "off",
+  "editor.tabSize": 2,
+  "editor.wordBasedSuggestions": "matchingDocuments",
+  "editor.wordWrap": "on",
+  "emmet.triggerExpansionOnTab": true, // Expand html tag on tab
+  "explorer.autoReveal": true,
+  "explorer.openEditors.sortOrder": "alphabetical",
+  "files.defaultLanguage": "js",
   "files.exclude": {
-    "**/.git": true, // Exclude .git folder
-    "**/.gitignore": false, // Include .gitignore file
-    "**/.idea": true, // Exclude .idea folder
-    "**/node_modules": true, // Exclude node_modules folder
-    "pnpm-lock.yaml": true // Exclude pnpm-lock.yaml file
+    "**/.git": true,
+    "**/.gitignore": true,
+    "**/.idea": true,
+    "**/node_modules": true,
+    "pnpm-lock.yaml": true
   },
   "indentRainbow.colors": [
     "rgba(255,255,64,0.1)",
     "rgba(127,255,127,0.1)",
     "rgba(255,127,255,0.1)",
     "rgba(79,236,236,0.1)"
-  ], // Set colors for indent rainbow
+  ],
   "indentRainbow.indentSetter": {
-    "js": 2, // Set the indent size to 2 spaces for JavaScript files
-    "ts": 2 // Set the indent size to 2 spaces for TypeScript files
+    "js": 2,
+    "ts": 2
   },
-  "javascript.preferences.importModuleSpecifier": "non-relative", // Use non-relative import module specifiers in JavaScript files
-  "markdown.preview.scrollPreviewWithEditor": false, // Disable scrolling preview with editor
-  "tailwind-fold.autoFold": false, // Disable automatic folding for Tailwind CSS classes
-  "terminal.integrated.defaultProfile.linux": "bash", // Set the default terminal profile for Linux to bash
-  "terminal.integrated.defaultProfile.osx": "zsh", // Set the default terminal profile for macOS to zsh
-  "terminal.integrated.defaultProfile.windows": "Git Bash", // Set the default terminal profile for Windows to Git Bash
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "markdown.preview.scrollPreviewWithEditor": false,
+  "tailwind-fold.autoFold": false,
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.profiles.windows": {
     "GitBash": {
       "icon": "terminal-bash",
       "path": ["C:\\Program Files\\Git\\bin\\bash.exe"],
       "source": "Git Bash"
     }
-  }, // Configure the Git Bash terminal profile for Windows
-  "typescript.preferences.importModuleSpecifier": "non-relative", // Use non-relative import module specifiers in TypeScript files
-  "window.zoomLevel": -1, // Set the window zoom level to -1
-  "workbench.editor.enablePreview": false, // Disable preview for editors
-  "workbench.iconTheme": "material-icon-theme", // Set the icon theme to Material Icon Theme
-  "workbench.settings.editor": "json", // Open settings in JSON editor
-  "workbench.startupEditor": "none", // Don't open any editor on startup
-  "workbench.tree.indent": 15, // Set the tree indentation to 15 pixels
-  "workbench.tree.renderIndentGuides": "always" // Always render indent guides in the tree view
+  },
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "window.zoomLevel": -1,
+  "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.settings.editor": "json",
+  "workbench.startupEditor": "none", // charge page d'acceuil
+  "workbench.tree.indent": 15,
+  "workbench.tree.renderIndentGuides": "always",
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  }
 }
