@@ -77,10 +77,8 @@
   "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.settings.editor": "json",
+  "workbench.sideBar.location": "left",
   "workbench.startupEditor": "none", // charge page d'acceuil
   "workbench.tree.indent": 15,
-  "workbench.tree.renderIndentGuides": "always",
-  "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer"
-  }
+  "workbench.tree.renderIndentGuides": "always"
 }
