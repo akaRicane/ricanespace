@@ -43,9 +43,9 @@
   "explorer.openEditors.sortOrder": "alphabetical",
   "files.defaultLanguage": "js",
   "files.exclude": {
-    "**/.git": true,
+    "**/.git": false,
     "**/.gitignore": false,
-    "**/.idea": true,
+    "**/.idea": false,
     "**/node_modules": false,
     "pnpm-lock.yaml": false
   },
