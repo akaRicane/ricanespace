@@ -9,7 +9,6 @@
   - no auto update
   - no electron proxy mirror
 - `pnpm install`
-- `pnpm install electron-store`
 - `pnpm dev`
 
 <br/>
@@ -111,7 +110,9 @@ module.exports = {
   plugins: [require('tailwindcss-animate')]
 }
 ```
+
 - add the postcss.config.js file
+
 ```
 module.exports = {
   plugins: {
@@ -122,6 +123,7 @@ module.exports = {
 ```
 
 ## Shadcn Ui
+
 - `pnpm dlx shadcn-solid@latest init`
   - Tailwindcss
   - Slate
@@ -130,6 +132,7 @@ module.exports = {
   - (leave blank)
   - leave as is (will be modified afterwards)
 - update tsconfig.web.json compilerOptions definition
+
 ```
 "compilerOptions": {
     "composite": true,
@@ -143,12 +146,14 @@ module.exports = {
         "src/renderer/src/components/shadcn/*"
       ],
       "@types": [
-        "src/types/types.ts"
+        "src/types/*"
       ]
     }
   }
 ```
+
 - update electron.vite.config.ts to edit properly aliases (also add the alias to define common types under src/types/types.ts)
+
 ```
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
 import { resolve } from 'path'
@@ -166,7 +171,7 @@ export default defineConfig({
       alias: {
         '@renderer': resolve('src/renderer/src'),
         '@shadcn': resolve('src/renderer/src/components/shadcn'),
-        '@types': resolve('src/types/types.ts')
+        '@types': resolve('src/types')
       }
     },
     plugins: [solid()]
@@ -174,7 +179,9 @@ export default defineConfig({
 })
 
 ```
+
 - update components.json
+
 ```
 {
   "$schema": "https://shadcn-solid.com/schema.json",
@@ -194,10 +201,12 @@ export default defineConfig({
 }
 
 ```
+
 - a "@" folder will be created by default. Move the file under a new folder in "src/renderer/src/components/shadcn" and rename the file lib.ts. You can create a ui folder too under shadcn one. Delete @ folder.
 - test `pnpm dlx shadcn-solid@latest add button`
   - if the button.tsx is not created under shadcn/ui folder, make sure you have the proper aliases defined in components.json
 - edit renderer/src/App.tsx to test and validate the shadcn ui button correct implementation
+
 ```
 import { Button } from '@shadcn/ui/button'
 import type { Component } from 'solid-js'
@@ -216,9 +225,9 @@ const App: Component = () => {
 
 export default App
 ```
+
 - to stay type checked in TS, need to add to shadcn components the return type: JSXElement
 
 ## Finish installation
 
 - remove everything except main.css in renderer/assets folder
-- 
