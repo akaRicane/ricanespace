@@ -32,11 +32,12 @@ I added a description of each settings to ease the integration / understanding.
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 - [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock)
 
-**JS, TS, React development**
+**JS, TS, React, Solid development**
 
 - [Auto Import - ES6, TS, JSX, TSX](https://marketplace.visualstudio.com/items?itemName=NuclleaR.vscode-extension-auto-import)
 - [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 - [JavaScript and TypeScript Nightly](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next)
+- [SolidJS Snippets](https://marketplace.visualstudio.com/items?itemName=solidjs-community.solid-snippets)
 
 **Adonis JS**
 
