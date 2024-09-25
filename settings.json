@@ -59,8 +59,9 @@
     "js": 2,
     "ts": 2
   },
-  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifier": "shortest",
   "markdown.preview.scrollPreviewWithEditor": false,
+  "peacock.affectPanelBorder": true,
   "tailwind-fold.autoFold": false,
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.defaultProfile.osx": "zsh",
@@ -72,10 +73,12 @@
       "source": "Git Bash"
     }
   },
+  "terminal.panelPosition": "top",
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "window.zoomLevel": -1,
   "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.panel.defaultLocation": "top",
   "workbench.settings.editor": "json",
   "workbench.sideBar.location": "left",
   "workbench.startupEditor": "none", // charge page d'acceuil

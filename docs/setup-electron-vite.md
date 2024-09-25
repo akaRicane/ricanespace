@@ -22,6 +22,8 @@
 - change file extension in .cjs and its content
 
 ```
+// tailwind.config.cjs
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class', '[data-kb-theme="dark"]'],
@@ -122,7 +124,7 @@ module.exports = {
 }
 ```
 
-## Shadcn Ui
+## Shadcn Ui & Aliases
 
 - `pnpm dlx shadcn-solid@latest init`
   - Tailwindcss
@@ -131,58 +133,87 @@ module.exports = {
   - Yes
   - (leave blank)
   - leave as is (will be modified afterwards)
-- update tsconfig.web.json compilerOptions definition
+- update tsconfig.web.json to add shadcn & typing aliases
 
 ```
-"compilerOptions": {
+// tsconfig.web.json
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "include": [
+    "src/renderer/src/env.d.ts",
+    "src/renderer/src/**/*",
+    "src/renderer/src/**/*.tsx",
+    "src/preload/*.d.ts",
+    "src/types/**/*.d.ts"
+  ],
+  "compilerOptions": {
     "composite": true,
     "jsxImportSource": "solid-js",
     "baseUrl": ".",
     "paths": {
-      "@renderer/*": [
-        "src/renderer/src/*"
-      ],
-      "@shadcn/*": [
-        "src/renderer/src/components/shadcn/*"
-      ],
-      "@types": [
-        "src/types/*"
-      ]
+      "@shadcn/*": ["src/renderer/src/components/shadcn/*"],
+      "@renderer/*": ["src/renderer/src/*"],
+      "@typing/*": ["src/types/*"]
     }
   }
+}
+
 ```
 
 - update electron.vite.config.ts to edit properly aliases (also add the alias to define common types under src/types/types.ts)
 
 ```
-import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
+// electron.vite.config.ts
+import { bytecodePlugin, defineConfig } from 'electron-vite'
 import { resolve } from 'path'
 import solid from 'vite-plugin-solid'
 
 export default defineConfig({
   main: {
-    plugins: [externalizeDepsPlugin()]
+    resolve: {
+      alias: {
+        '@main': resolve('src/main'),
+        '@preload': resolve('src/preload'),
+        '@renderer': resolve('src/renderer/src'),
+        '@shadcn': resolve('src/renderer/src/components/shadcn'),
+        '@typing': resolve('src/types')
+      }
+    },
+    plugins: [bytecodePlugin()]
   },
   preload: {
-    plugins: [externalizeDepsPlugin()]
+    resolve: {
+      alias: {
+        '@main': resolve('src/main'),
+        '@preload': resolve('src/preload'),
+        '@renderer': resolve('src/renderer/src'),
+        '@shadcn': resolve('src/renderer/src/components/shadcn'),
+        '@typing': resolve('src/types')
+      }
+    },
+    plugins: [bytecodePlugin()]
   },
   renderer: {
     resolve: {
       alias: {
+        '@main': resolve('src/main'),
+        '@preload': resolve('src/preload'),
         '@renderer': resolve('src/renderer/src'),
         '@shadcn': resolve('src/renderer/src/components/shadcn'),
-        '@types': resolve('src/types')
+        '@typing': resolve('src/types')
       }
     },
     plugins: [solid()]
   }
 })
 
+
 ```
 
 - update components.json
 
 ```
+// components.json
 {
   "$schema": "https://shadcn-solid.com/schema.json",
   "tailwind": {

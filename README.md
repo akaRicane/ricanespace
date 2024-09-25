@@ -48,7 +48,7 @@ I added a description of each settings to ease the integration / understanding.
 
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 - [Tailwind Fold](https://marketplace.visualstudio.com/items?itemName=stivo.tailwind-fold)
-- [Headwind](https://marketplace.visualstudio.com/items?itemName=heybourn.headwind)
+- [Sortwind](https://marketplace.visualstudio.com/items?itemName=SortwindPartners.sortwind)
 
 **Other tools**
 
