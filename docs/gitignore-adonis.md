@@ -7,6 +7,7 @@ tmp
 # Secrets
 .env
 .env.local
+.env.production
 .env.production.local
 .env.development.local
 
@@ -33,4 +34,5 @@ pnpm-lock.yaml
 
 # VSCode
 .vscode
+
 ```
